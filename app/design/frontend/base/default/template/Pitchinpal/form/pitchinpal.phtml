@@ -132,16 +132,18 @@ $pitchinpal_urlToSend = http_build_query($valor);
               <input type="checkbox" title="<?php echo $this->__('If you do not have enough PitchinPal™ FriendFunds™, you can check this box to pay the difference by credit card.') ?>" name="payment[custom_paycard]" value="1" onClick="showPartialPay(this);" id="checkbox_partial"/>
             </span>
                 <div id="customcardpay" style="display:none;">
-                     <div>
-                          <label><?php echo $this->__('Credit Card Number') ?>*</label>
-                          <span>
+                  <ul class="form-list" style="padding-left: 0px;">
+                     <li>
+                          <p class="required">* Required Fields</p>
+                          <label  class="required"><?php echo $this->__('Credit Card Number') ?>*</label>
+                          <div class="input-box">
                             <input type="text" title="<?php echo $this->__('Credit Card Number') ?>" name="payment[custom_card_number]"  id="text_card_number" />
-                          </span>
-                      </div>
+                          </div>
+                      </li>
 
-                      <div>
-                          <label><?php echo $this->__('Expiration Month') ?>*</label>
-                          <span>
+                      <li>
+                          <label  class="required"><?php echo $this->__('Expiration Month') ?>*</label>
+                          <div class="input-box">
                            <select  name="payment[custom_card_month]" id="select_month">
 
                               <option value="1">January</option>
@@ -157,29 +159,29 @@ $pitchinpal_urlToSend = http_build_query($valor);
                               <option value="11">November</option>
                               <option value="12">December</option>
                             </select>
-                          </span>
-                      </div>
+                          </div>
+                      </li>
 
-                       <div>
-                          <label><?php echo $this->__('Expiration Year') ?>*</label>
-                          <span>
-                         <select name="payment[custom_card_year]" id="select_year">
-                              <?php
-                                 for($i = date('Y'); $i < date('Y')+10; $i++){
-                                    echo "<option value='".$i."'>$i</option>";
-                                 }
-                              ?>
-                          </select>
-                          </span>
-                      </div>
-                       <div>
-                          <label><?php echo $this->__('CVV Number') ?>*</label>
-                          <span>
+                       <li>
+                          <label class="required"><?php echo $this->__('Expiration Year') ?>*</label>
+                          <div class="input-box">
+                           <select name="payment[custom_card_year]" id="select_year">
+                                <?php
+                                   for($i = date('Y'); $i < date('Y')+10; $i++){
+                                      echo "<option value='".$i."'>$i</option>";
+                                   }
+                                ?>
+                            </select>
+                          </div>
+                      </li>
+                       <li>
+                          <label  class="required"><?php echo $this->__('CVV Number') ?>*</label>
+                          <div class="input-box">
                             <input type="text" title="<?php echo $this->__('CVV Number') ?>" name="payment[custom_card_cvv]"  id="text_cvv"/>
-                          </span>
-                      </div>
+                          </div>
+                      </li>
 
-
+                  </ul>
 
 
                 </div>
