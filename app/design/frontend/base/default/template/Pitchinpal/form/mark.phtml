@@ -1,0 +1,8 @@
+<!-- PitchinPal Logo -->
+<img src="<?php echo $this->escapeHtml($this->getPaymentAcceptanceMarkSrc())?>"  class="v-middle" />&nbsp;
+<a href="<?php echo $this->getPaymentAcceptanceMarkHref()?>" onclick="javascript:window.open('<?php echo $this->getPaymentAcceptanceMarkHref()?>','_blank'); return false;">
+    <?php 
+    	if($this->getPaymentWhatIs()) {echo $this->getPaymentWhatIs();} else {echo 'What is PitchinPal?';} 
+    ?>
+</a>
+<!-- PitchinPal Logo -->

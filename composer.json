@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/pitchinpal",
+    "type": "magento-module",
+    "license": "GPL",
+    "homepage": "",
+    "description": "its a new ecommerce payment option for PitchinPal, it's allows friends to split the cost of product or gift.",
+    "authors": [
+    {
+        "name": "Jon Brenan",
+        "email": "magento@pitchinpal.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
